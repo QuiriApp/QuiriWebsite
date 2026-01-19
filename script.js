@@ -1,6 +1,23 @@
 // Set current year in footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+// Device-specific CTA button text
+function updateCTAButton() {
+    const ctaBtn = document.getElementById('ctaBtn');
+    const userAgent = navigator.userAgent.toLowerCase();
+    
+    if (/iphone|ipad|ipod/.test(userAgent)) {
+        ctaBtn.textContent = 'Coming Soon to App Store';
+    } else if (/android/.test(userAgent)) {
+        ctaBtn.textContent = 'Coming Soon to Play Store';
+    } else {
+        ctaBtn.textContent = 'Coming Soon to App Store and Play Store';
+    }
+}
+
+// Call the function when page loads
+document.addEventListener('DOMContentLoaded', updateCTAButton);
+
 // Mobile Menu Toggle
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.querySelector('.nav-links');

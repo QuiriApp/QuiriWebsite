@@ -70,24 +70,52 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #0000FF 100%, #4169E1 0%);
+    background-image: url('assets/carwash.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #FFFFFF;
     padding: 120px 20px 80px;
-    text-align: center;
-    min-height: 10vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
-.hero-content h1 {
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #FFFFFF;
 }
 
-.hero-content p {
+.hero-text p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
+    color: #FFFFFF;
+}
+
+.hero-image {
+    display: none;
 }
 
 .cta-btn {
@@ -441,9 +469,13 @@ body {
 }
 
 .contact-item a {
-    color: #0000FF;
+    color: #333;
     text-decoration: none;
     transition: color 0.3s;
+}
+
+.contact-item a[href^="mailto:"] {
+    color: #0000FF;
 }
 
 .contact-icon {
@@ -523,6 +555,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar .container {
+        padding: 0 20px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -532,6 +568,7 @@ body {
         width: 100%;
         background: #0000FF;
         padding: 1rem;
+        gap: 1rem;
     }
 
     .nav-links.active {
@@ -542,16 +579,129 @@ body {
         display: block;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
+    /* Hero Section Mobile */
+    .hero {
+        padding: 100px 15px 60px;
+        min-height: 60vh;
     }
 
-    .hero-content p {
+    .hero-text h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-btn {
+        padding: 12px 30px;
         font-size: 1rem;
     }
 
-    .pricing-card.featured {
-        transform: scale(1);
+    /* Sections Mobile */
+    .how-it-works,
+    .why-quiriapp,
+    .app-preview,
+    .pricing,
+    .contact,
+    .faq {
+        padding: 60px 15px;
+    }
+
+    .how-it-works h2,
+    .why-quiriapp h2,
+    .app-preview h2,
+    .pricing h2,
+    .contact h2,
+    .faq h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Cards Mobile */
+    .steps,
+    .features,
+    .pricing-cards,
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .step-card,
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    /* Contact Mobile */
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+    }
+
+    /* Pricing Mobile */
+    .pricing-card h3 {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+
+    /* FAQ Mobile */
+    .faq-question {
+        font-size: 0.9rem;
+    }
+
+    /* Modal Mobile */
+    .modal-content {
+        margin: 20px;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .how-it-works h2,
+    .why-quiriapp h2,
+    .app-preview h2,
+    .pricing h2,
+    .contact h2,
+    .faq h2 {
+        font-size: 1.8rem;
+    }
+
+    .step-card,
+    .feature-card {
+        padding: 1rem;
+    }
+
+    .pricing-card > *:not(h3) {
+        padding: 0 1.5rem;
+    }
+
+    .pricing-card .features-list {
+        padding: 0 1.5rem;
+    }
+
+    .pricing-card .pricing-btn,
+    .pricing-card .pricing-btn-first {
+        margin: 0 1.5rem 1.5rem 1.5rem;
+        width: calc(100% - 3rem);
     }
 }
 
