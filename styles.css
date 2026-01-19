@@ -71,6 +71,8 @@ html {
     color: #FFFFFF;
     font-size: 1.5rem;
     cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
 }
 
 /* Hero Section */
@@ -574,6 +576,8 @@ html {
         background: #0000FF;
         padding: 1rem;
         gap: 1rem;
+        z-index: 999;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .nav-links.active {
@@ -582,6 +586,7 @@ html {
 
     .menu-toggle {
         display: block;
+        touch-action: manipulation;
     }
 
     /* Hero Section Mobile */

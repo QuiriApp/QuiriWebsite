@@ -22,9 +22,19 @@ document.addEventListener('DOMContentLoaded', updateCTAButton);
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+}
 
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
