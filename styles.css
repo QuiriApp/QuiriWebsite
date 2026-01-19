@@ -1,0 +1,611 @@
+@import url('https://fonts.cdnfonts.com/css/azo-sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Azo Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: #0000FF;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0px;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 0 40px 0 10px;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0000FF 100%, #4169E1 0%);
+    color: #FFFFFF;
+    padding: 120px 20px 80px;
+    text-align: center;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    background: #FFFFFF;
+    color: #0000FF;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 80px 20px;
+    background: #FFFFFF;
+}
+
+.how-it-works h2 {
+    text-align: center;
+    color: #0000FF;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.step-card {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.1);
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #FFFFFF;
+    color: #0000FF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-icon {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.step-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.step-card h3 {
+    color: #0000FF;
+    margin: 1rem 0;
+}
+
+/* Why QuiriApp Section */
+.why-quiriapp {
+    padding: 3px 20px;
+    background: #FFFFFF;
+}
+
+.why-quiriapp h2 {
+    text-align: center;
+    color: #0000FF;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+   background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.1);
+    position: relative;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #0000FF;
+    margin-bottom: 1rem;
+}
+
+.feature-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.feature-card h3 {
+    color: #0000FF;
+    margin-bottom: 0.5rem;
+}
+
+/* App Preview Section */
+.app-preview {
+    padding: 80px 20px;
+    background: #FFFFFF;
+}
+
+.app-preview h2 {
+    text-align: center;
+    color: #0000FF;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.preview-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.preview-text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.preview-text h3 {
+    color: #0000FF;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Pricing Section */
+.pricing {
+    padding: 80px 20px;
+    background: #FFFFFF;
+}
+
+.pricing h2 {
+    text-align: center;
+    color: #0000FF;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #666;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: #FFFFFF;
+    padding: 0;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.pricing-card.featured {
+    background: #B3D1FF;
+}
+
+.pricing-card h3 {
+    color: #0000FF;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    background: #B3D1FF;
+    padding: 1.5rem;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.plan-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.pricing-card > *:not(h3) {
+    padding: 0 2.5rem;
+}
+
+.pricing-card .features-list {
+    padding: 0 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0000FF;
+    margin: 1.5rem 0;
+}
+
+.features-list {
+    list-style: none;
+    margin: 2rem 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.features-list li {
+    padding: 0.5rem 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.pricing-card .pricing-btn {
+    background: #0000FF;
+    color: #FFFFFF;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin: 0 2.5rem 2.5rem 2.5rem;
+    width: calc(100% - 5rem);
+}
+
+.pricing-card .pricing-btn-first {
+    background: #020274;
+    color: #FFFFFF;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    margin: 0 2.5rem 2.5rem 2.5rem;
+    width: calc(100% - 5rem);
+}
+
+.pricing-card .pricing-btn:hover,
+.pricing-card .pricing-btn-first:hover {
+    opacity: 0.9;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background: #FFFFFF;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #0000FF;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #666;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background: #0000FF;
+    color: #FFFFFF;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact-item .icon {
+    font-size: 1.5rem;
+}
+
+.contact-item a {
+    color: #0000FF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.whatsapp-icon {
+    width: 32px;
+    height: 32px;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 80px 20px;
+    background: #F5F7FA;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #0000FF;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 255, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #0000FF;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(90deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: #0000FF;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0000FF;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.modal-btn {
+    background: #0000FF;
+    color: #FFFFFF;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
