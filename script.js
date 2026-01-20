@@ -19,15 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle - FIXED FOR iOS
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.querySelector('.nav-links');
 
     if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', (e) => {
-            // Removed e.preventDefault() to ensure touch events work correctly on all devices
+        // Use touchstart for better iOS compatibility
+        const toggleMenu = (e) => {
+            e.preventDefault();
             e.stopPropagation();
             navLinks.classList.toggle('active');
+        };
+
+        // Add both click and touchstart listeners
+        menuToggle.addEventListener('click', toggleMenu);
+        menuToggle.addEventListener('touchstart', toggleMenu, { passive: false });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
         });
 
         // Close menu when clicking on a link
@@ -86,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            // TODO: Replace with your generated Google Apps Script Web App URL
             const scriptURL = 'https://script.google.com/macros/s/AKfycbybjgCZ7BB97DnVj2YPRDBR4EKKr1SP-cHp7Qg2QOP3BGYPKnb7wIeiCNoqCwxReiPn2A/exec';
 
             fetch(scriptURL, { method: 'POST', body: new FormData(contactForm)})

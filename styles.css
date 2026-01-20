@@ -74,6 +74,13 @@ html {
     cursor: pointer;
     padding: 10px;
     z-index: 1001;
+    /* iOS-specific fixes */
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Ensure it's clickable */
+    position: relative;
 }
 
 /* Hero Section */
@@ -560,6 +567,7 @@ html {
     text-align: center;
     padding: 1rem;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
