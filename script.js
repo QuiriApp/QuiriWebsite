@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', (e) => {
             // Removed e.preventDefault() to ensure touch events work correctly on all devices
+            e.stopPropagation();
             navLinks.classList.toggle('active');
         });
 
