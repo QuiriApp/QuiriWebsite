@@ -590,7 +590,7 @@ html {
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex !important;
     }
 
     .menu-toggle {
