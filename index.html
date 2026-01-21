@@ -263,8 +263,13 @@
             console.log('Menu clicked'); // Debug
             const navLinks = document.querySelector('.nav-links');
             if (navLinks) {
-                navLinks.classList.toggle('active');
-                console.log('Menu toggled, active:', navLinks.classList.contains('active')); // Debug
+                if (navLinks.style.display === 'flex') {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                    navLinks.style.flexDirection = 'column';
+                }
+                console.log('Menu display:', navLinks.style.display); // Debug
             } else {
                 console.log('Nav links not found'); // Debug
             }
