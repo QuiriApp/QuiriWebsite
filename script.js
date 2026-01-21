@@ -19,36 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Mobile Menu Toggle - FIXED FOR iOS
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.querySelector('.nav-links');
+    // Mobile Menu Toggle
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.querySelector('.nav-links');
 
-    if (menuToggle && navLinks) {
-        // Use touchstart for better iOS compatibility
-        const toggleMenu = (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            navLinks.classList.toggle('active');
-        };
-
-        // Add both click and touchstart listeners
-        menuToggle.addEventListener('click', toggleMenu);
-        menuToggle.addEventListener('touchstart', toggleMenu, { passive: false });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
-                navLinks.classList.remove('active');
-            }
-        });
-
-        // Close menu when clicking on a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    }
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
