@@ -23,9 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        navLinks.classList.toggle('active');
+    });
+}
 
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
