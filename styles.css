@@ -598,6 +598,8 @@ html {
 
     .nav-links.active {
         display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .menu-toggle {

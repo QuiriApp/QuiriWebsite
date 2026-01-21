@@ -18,13 +18,13 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">QuiriApp</div>
-                <ul class="nav-links">
+                <ul class="nav-links" style="-webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto;">
                     <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#why-quiriapp">Why QuiriApp</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="menu-toggle" id="menuToggle" onclick="toggleMobileMenu()">☰</button>
+                <button class="menu-toggle" id="menuToggle" onclick="toggleMobileMenu()" style="-webkit-user-select: auto; -moz-user-select: auto; -ms-user-select: auto; user-select: auto;">☰</button>
             </div>
         </nav>
         <div class="hero-content">
@@ -260,11 +260,24 @@
     <script>
         // Fallback mobile menu function
         function toggleMobileMenu() {
+            console.log('Menu clicked'); // Debug
             const navLinks = document.querySelector('.nav-links');
             if (navLinks) {
                 navLinks.classList.toggle('active');
+                console.log('Menu toggled, active:', navLinks.classList.contains('active')); // Debug
+            } else {
+                console.log('Nav links not found'); // Debug
             }
         }
+        
+        // Also try with event listener
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menuToggle');
+            if (menuBtn) {
+                menuBtn.addEventListener('touchstart', toggleMobileMenu);
+                menuBtn.addEventListener('click', toggleMobileMenu);
+            }
+        });
     </script>
 </body>
 
