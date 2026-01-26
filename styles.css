@@ -36,7 +36,7 @@ html {
     width: 100%;
     top: 0;
     right: 0px;
-    z-index: 9999;
+    z-index: 10001;
 }
 
 .navbar .container {
@@ -156,7 +156,7 @@ html {
 
 /* How It Works Section */
 .how-it-works {
-    padding: 20px 20px ;
+    padding: 20px 20px 30px;
     background: #0000FF;
 }
 
@@ -661,8 +661,17 @@ html {
         padding: 10px 15px;
     }
 
+    .how-it-works {
+        padding-bottom: 50px;
+    }
+
+    .pricing {
+        padding-bottom: 30px;
+    }
+
     .contact {
         padding-top: 10px;
+ 
         padding-bottom: 20px;
     }
 
@@ -798,7 +807,7 @@ html {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: 10002;
     left: 0;
     top: 0;
     width: 100%;
