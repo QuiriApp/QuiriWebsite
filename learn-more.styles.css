@@ -1,0 +1,234 @@
+.learn-more-content {
+    padding: 100px 0 40px;
+    background: #FFFFFF;
+    min-height: 100vh;
+}
+
+.learn-more-content h1 {
+    color: #0000FF;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #0000FF;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: #333;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divider {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 3rem 0;
+    color: #0000FF;
+}
+
+.step-section {
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-section h2 {
+    color: #0000FF;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.step-section p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.step-section ul {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.step-section ul li {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    font-style: italic;
+    color: #0000FF;
+    font-weight: 500;
+}
+
+.why-section {
+    margin-bottom: 3rem;
+    background: #0000FF;
+    padding: 3rem 0;
+    width: 100%;
+}
+
+.why-section > .container {
+    max-width: 800px;
+}
+
+.why-section h2 {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.benefit-group h3 {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-group ul li {
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.step-section ul {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.step-section ul li {
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.closing {
+    text-align: center;
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.closing p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .learn-more-content {
+        padding: 80px 0 40px;
+    }
+    
+    .learn-more-content h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+    }
+    
+    .step-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .benefits {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Step Cards Grid */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.step-card {
+    background: #FFFFFF;
+    padding: 1rem 1rem 0.1rem 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-card h2 {
+    color: #0000FF;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.step-card > img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto 0.1rem auto;
+    border-radius: 10px;
+}
+
+.step-card p {
+    margin: 0.1rem 0;
+}
+
+.step-card .highlight {
+    color: #888686;
+    font-weight: bold;
+    margin-top: 0.2rem;
+    display: block;
+}
+
+.step-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.step-card li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}

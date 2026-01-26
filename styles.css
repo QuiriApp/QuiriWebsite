@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/azo-sans');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Azo Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
@@ -31,7 +31,7 @@ html {
 /* Navbar */
 .navbar {
     background: #0000FF;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -156,15 +156,15 @@ html {
 
 /* How It Works Section */
 .how-it-works {
-    padding: 60px 20px;
-    background: #FFFFFF;
+    padding: 20px 20px ;
+    background: #0000FF;
 }
 
 .how-it-works h2 {
     text-align: center;
-    color: #0000FF;
+    color: #FFFFFF;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .steps {
@@ -174,20 +174,25 @@ html {
 }
 
 .step-card {
-    background: #FFFFFF;
+    background: #0000FF;
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
 }
 
 .step-number {
     position: absolute;
     top: 20px;
     left: 20px;
-    background: #FFFFFF;
-    color: #0000FF;
+    background: #0000FF;
+    color: #FFFFFF;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -208,9 +213,15 @@ html {
 }
 
 .step-card h3 {
-    color: #0000FF;
+    color: #FFFFFF;
+ 
     margin: 1rem 0;
 }
+.step-card p {
+    color: #FFFFFF;
+   
+}
+
 
 /* Why QuiriApp Section */
 .why-quiriapp {
@@ -288,7 +299,7 @@ html {
 
 /* Pricing Section */
 .pricing {
-    padding: 80px 20px;
+    padding: 10px 20px;
     background: #FFFFFF;
 }
 
@@ -296,12 +307,12 @@ html {
     text-align: center;
     color: #0000FF;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.1rem;
 }
 
 .pricing-subtitle {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: #666;
 }
 
@@ -382,7 +393,7 @@ html {
     height: 20px;
 }
 
-.pricing-card .pricing-btn {
+.pricing-card .pricing-btn{
     background: #0000FF;
     color: #FFFFFF;
     padding: 12px 30px;
@@ -393,6 +404,7 @@ html {
     transition: opacity 0.3s;
     margin: 0 2.5rem 2.5rem 2.5rem;
     width: calc(100% - 5rem);
+    text-decoration: none;
 }
 
 .pricing-card .pricing-btn-first {
@@ -406,6 +418,7 @@ html {
     transition: opacity 0.3s;
     margin: 0 2.5rem 2.5rem 2.5rem;
     width: calc(100% - 5rem);
+    text-decoration: none;
 }
 
 .pricing-card .pricing-btn:hover,
@@ -415,27 +428,29 @@ html {
 
 /* Contact Section */
 .contact {
-    padding: 80px 20px;
-    background: #FFFFFF;
+    padding: 20px 20px 20px;
+    background: #0000FF;
 }
 
 .contact h2 {
     text-align: center;
-    color: #0000FF;
+    color: #FFFFFF;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 .contact-subtitle {
     text-align: center;
-    margin-bottom: 3rem;
-    color: #666;
+    margin-bottom: 0;
+    color: #FFFFFF;
+    
 }
 
 .contact-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
+    gap: 1.5rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -449,14 +464,21 @@ html {
 .contact-form input,
 .contact-form textarea {
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #FFFFFF;
     border-radius: 8px;
     font-size: 1rem;
+    color: #FFFFFF;
+    background: #0000FF;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgb(255, 255, 255);
 }
 
 .submit-btn {
     background: #0000FF;
-    color: #FFFFFF;
+    color: #0000FF;
     padding: 15px;
     border: none;
     border-radius: 8px;
@@ -473,7 +495,7 @@ html {
 .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.8rem;
     justify-content: center;
 }
 
@@ -486,16 +508,19 @@ html {
 
 .contact-item .icon {
     font-size: 1.5rem;
+    width: 45px;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-item a {
-    color: #333;
+    color: #FFFFFF;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .contact-item a[href^="mailto:"] {
-    color: #0000FF;
+    color: #FFFFFF;
 }
 
 .contact-icon {
@@ -504,22 +529,21 @@ html {
 }
 
 .whatsapp-icon {
-    width: 40px;
-    height: 40px;
-    margin-left: -8px;
+    width: 33px;
+    height: 33px;
 }
 
 /* FAQ Section */
 .faq {
-    padding: 80px 20px;
-    background: #F5F7FA;
+    padding: 20px 20px ;
+    background: #FFFFFF;
 }
 
 .faq h2 {
     text-align: center;
     color: #0000FF;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .faq-grid {
@@ -634,11 +658,16 @@ html {
     .pricing,
     .contact,
     .faq {
-        padding: 60px 15px;
+        padding: 10px 15px;
+    }
+
+    .contact {
+        padding-top: 10px;
+        padding-bottom: 20px;
     }
 
     .why-quiriapp {
-        padding: 60px 15px 20px;
+        padding: 20px 15px 10px;
     }
 
     .how-it-works h2,
@@ -649,6 +678,14 @@ html {
     .faq h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
+    }
+
+    .contact h2 {
+        margin-bottom: 0.2rem;
+    }
+
+    .faq h2 {
+        margin-bottom: 1rem;
     }
 
     /* Cards Mobile */
@@ -673,6 +710,7 @@ html {
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        gap: 1rem;
     }
 
     .contact-form input,
@@ -708,6 +746,7 @@ html {
 
     .container {
         max-width: 100%;
+        overflow-x: hidden;
     }
 
     /* Modal Mobile */
@@ -818,4 +857,20 @@ html {
      width: 60px;
     height: auto;
     max-width: 100%;
+}
+/* Contact Form Override */
+.contact-form {
+    background: #0000FF !important;
+    padding: 0.5rem 2rem 2rem 2rem !important;
+    border-radius: 15px !important;
+}
+
+.submit-btn {
+    background: #0000FF !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+.premium-text {
+    color: #EFBF04;
 }
