@@ -100,7 +100,6 @@ html {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    z-index: 1;
 }
 
 .hero::before {
@@ -111,12 +110,12 @@ html {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    z-index: 0;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
@@ -174,7 +173,7 @@ html {
 }
 
 .step-card {
-    background: #0000FF;
+    background: #FFFFFF;
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
@@ -213,13 +212,11 @@ html {
 }
 
 .step-card h3 {
-    color: #FFFFFF;
- 
+    color: #0000FF;
     margin: 1rem 0;
 }
 .step-card p {
-    color: #FFFFFF;
-   
+    color: #0000FF;
 }
 
 
@@ -242,29 +239,62 @@ html {
     gap: 2rem;
 }
 
+/* Feature Cards Professional Redesign */
 .feature-card {
-   background: #FFFFFF;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.1);
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1a1a1a;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-icon {
-    font-size: 2.5rem;
-    color: #0000FF;
-    margin-bottom: 1rem;
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
 }
 
-.feature-icon img {
-    width: 50px;
-    height: 50px;
+.feature-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    text-align: left;
+    width: 100%;
 }
 
 .feature-card h3 {
-    color: #0000FF;
+    color: #FFFFFF;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card p {
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* App Preview Section */
@@ -299,7 +329,7 @@ html {
 
 /* Pricing Section */
 .pricing {
-    padding: 10px 20px;
+    padding: 10px;
     background: #FFFFFF;
 }
 
@@ -429,7 +459,28 @@ html {
 /* Contact Section */
 .contact {
     padding: 20px 20px 20px;
-    background: #0000FF;
+    background-image: url('assets/blackman.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0000FF;
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 49, 49, 0.7);
+    z-index: 1;
+}
+
+.contact .container {
+    position: relative;
+    z-index: 2;
 }
 
 .contact h2 {
@@ -468,7 +519,7 @@ html {
     border-radius: 8px;
     font-size: 1rem;
     color: #FFFFFF;
-    background: #0000FF;
+    background: transparent;
 }
 
 .contact-form input::placeholder,
@@ -743,19 +794,19 @@ html {
     }
 
     /* Mobile specific fixes */
-    body {
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-    }
-
     html, body {
-        max-width: 100vw;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
         position: relative;
+        -webkit-overflow-scrolling: touch;
     }
 
     .container {
         max-width: 100%;
-        overflow-x: hidden;
+       
     }
 
     /* Modal Mobile */
@@ -807,7 +858,7 @@ html {
 .modal {
     display: none;
     position: fixed;
-    z-index: 10002;
+    z-index: 1000000;
     left: 0;
     top: 0;
     width: 100%;
@@ -869,13 +920,13 @@ html {
 }
 /* Contact Form Override */
 .contact-form {
-    background: #0000FF !important;
+    background: transparent !important;
     padding: 0.5rem 2rem 2rem 2rem !important;
     border-radius: 15px !important;
 }
 
 .submit-btn {
-    background: #0000FF !important;
+    background: transparent !important;
     color: #FFFFFF !important;
     border: 1px solid #FFFFFF !important;
 }
